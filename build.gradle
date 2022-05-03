@@ -21,10 +21,13 @@ dependencies {
     // 引入mybatis
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
     implementation 'mysql:mysql-connector-java'
+    implementation('tk.mybatis:mapper-spring-boot-starter:4.2.1')
 
     implementation 'com.alibaba:fastjson:1.2.76'
+    // lombok
     implementation 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
     implementation 'org.apache.commons:commons-lang3:3.12.0'
     implementation 'com.alibaba:easyexcel:2.2.11'
     // https://mvnrepository.com/artifact/org.openjdk.jol/jol-core
