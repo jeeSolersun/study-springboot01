@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.codeify.springboot01.mapper.TbHotelDao">
+  <resultMap id="BaseResultMap" type="com.codeify.springboot01.entity.TbHotel">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="price" jdbcType="INTEGER" property="price" />
+    <result column="brand" jdbcType="VARCHAR" property="brand" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="star_name" jdbcType="VARCHAR" property="starName" />
+    <result column="business" jdbcType="VARCHAR" property="business" />
+    <result column="latitude" jdbcType="VARCHAR" property="latitude" />
+    <result column="longitude" jdbcType="VARCHAR" property="longitude" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, `name`, address, price, brand, city, star_name, business, latitude, longitude, 
+    pic
+  </sql>
+
+</mapper>

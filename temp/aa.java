@@ -1,0 +1,599 @@
+
+ClassLoader:                                                                                                                                                                 
++-sun.misc.Launcher$AppClassLoader@18b4aac2                                                                                                                                  
+  +-sun.misc.Launcher$ExtClassLoader@2ff4f00f                                                                                                                                
+
+Location:                                                                                                                                                                    
+/Users/sunhanbing/IdeaProjects/study-springboot01/build/classes/java/main/                                                                                                   
+
+/*
+ * Decompiled with CFR.
+ * 
+ * Could not load the following classes:
+ *  com.codeify.springboot01.service.ComputerServiceImpl
+ */
+package com.codeify.springboot01.service;
+
+import com.codeify.springboot01.service.ComputerServiceImpl;
+import java.lang.reflect.Method;
+import org.aopalliance.aop.Advice;
+import org.springframework.aop.Advisor;
+import org.springframework.aop.SpringProxy;
+import org.springframework.aop.TargetClassAware;
+import org.springframework.aop.TargetSource;
+import org.springframework.aop.framework.Advised;
+import org.springframework.aop.framework.AopConfigException;
+import org.springframework.cglib.core.ReflectUtils;
+import org.springframework.cglib.core.Signature;
+import org.springframework.cglib.proxy.Callback;
+import org.springframework.cglib.proxy.Dispatcher;
+import org.springframework.cglib.proxy.Factory;
+import org.springframework.cglib.proxy.MethodInterceptor;
+import org.springframework.cglib.proxy.MethodProxy;
+import org.springframework.cglib.proxy.NoOp;
+
+public class ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3
+extends ComputerServiceImpl
+implements SpringProxy,
+Advised,
+Factory {
+    private boolean CGLIB$BOUND;
+    public static Object CGLIB$FACTORY_DATA;
+    private static final ThreadLocal CGLIB$THREAD_CALLBACKS;
+    private static final Callback[] CGLIB$STATIC_CALLBACKS;
+    private MethodInterceptor CGLIB$CALLBACK_0;
+    private MethodInterceptor CGLIB$CALLBACK_1;
+    private NoOp CGLIB$CALLBACK_2;
+    private Dispatcher CGLIB$CALLBACK_3;
+    private Dispatcher CGLIB$CALLBACK_4;
+    private MethodInterceptor CGLIB$CALLBACK_5;
+    private MethodInterceptor CGLIB$CALLBACK_6;
+    private static Object CGLIB$CALLBACK_FILTER;
+    private static final Method CGLIB$saveUser$0$Method;
+    private static final MethodProxy CGLIB$saveUser$0$Proxy;
+    private static final Object[] CGLIB$emptyArgs;
+    private static final Method CGLIB$equals$1$Method;
+    private static final MethodProxy CGLIB$equals$1$Proxy;
+    private static final Method CGLIB$toString$2$Method;
+    private static final MethodProxy CGLIB$toString$2$Proxy;
+    private static final Method CGLIB$hashCode$3$Method;
+    private static final MethodProxy CGLIB$hashCode$3$Proxy;
+    private static final Method CGLIB$clone$4$Method;
+    private static final MethodProxy CGLIB$clone$4$Proxy;
+
+    public static void CGLIB$SET_STATIC_CALLBACKS(Callback[] callbackArray) {
+        CGLIB$STATIC_CALLBACKS = callbackArray;
+    }
+
+    public static void CGLIB$SET_THREAD_CALLBACKS(Callback[] callbackArray) {
+        CGLIB$THREAD_CALLBACKS.set(callbackArray);
+    }
+
+    public final void saveUser() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor != null) {
+            Object object = methodInterceptor.intercept(this, CGLIB$saveUser$0$Method, CGLIB$emptyArgs, CGLIB$saveUser$0$Proxy);
+            return;
+        }
+        super.saveUser();
+    }
+
+    static void CGLIB$STATICHOOK17() {
+        CGLIB$THREAD_CALLBACKS = new ThreadLocal();
+        CGLIB$emptyArgs = new Object[0];
+        Class<?> clazz = Class.forName("com.codeify.springboot01.service.ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3");
+        Class<?> clazz2 = Class.forName("java.lang.Object");
+        Method[] methodArray = ReflectUtils.findMethods(new String[]{"equals", "(Ljava/lang/Object;)Z", "toString", "()Ljava/lang/String;", "hashCode", "()I", "clone", "()Ljava/lang/Object;"}, clazz2.getDeclaredMethods());
+        CGLIB$equals$1$Method = methodArray[0];
+        CGLIB$equals$1$Proxy = MethodProxy.create(clazz2, clazz, "(Ljava/lang/Object;)Z", "equals", "CGLIB$equals$1");
+        CGLIB$toString$2$Method = methodArray[1];
+        CGLIB$toString$2$Proxy = MethodProxy.create(clazz2, clazz, "()Ljava/lang/String;", "toString", "CGLIB$toString$2");
+        CGLIB$hashCode$3$Method = methodArray[2];
+        CGLIB$hashCode$3$Proxy = MethodProxy.create(clazz2, clazz, "()I", "hashCode", "CGLIB$hashCode$3");
+        CGLIB$clone$4$Method = methodArray[3];
+        CGLIB$clone$4$Proxy = MethodProxy.create(clazz2, clazz, "()Ljava/lang/Object;", "clone", "CGLIB$clone$4");
+        clazz2 = Class.forName("com.codeify.springboot01.service.ComputerServiceImpl");
+        CGLIB$saveUser$0$Method = ReflectUtils.findMethods(new String[]{"saveUser", "()V"}, clazz2.getDeclaredMethods())[0];
+        CGLIB$saveUser$0$Proxy = MethodProxy.create(clazz2, clazz, "()V", "saveUser", "CGLIB$saveUser$0");
+    }
+
+    final void CGLIB$saveUser$0() {
+        super.saveUser();
+    }
+
+    final boolean CGLIB$equals$1(Object object) {
+        return super.equals(object);
+    }
+
+    final String CGLIB$toString$2() {
+        return super.toString();
+    }
+
+    final int CGLIB$hashCode$3() {
+        return super.hashCode();
+    }
+
+    final Object CGLIB$clone$4() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public void setCallbacks(Callback[] callbackArray) {
+        this.CGLIB$CALLBACK_0 = (MethodInterceptor)callbackArray[0];
+        this.CGLIB$CALLBACK_1 = (MethodInterceptor)callbackArray[1];
+        this.CGLIB$CALLBACK_2 = (NoOp)callbackArray[2];
+        this.CGLIB$CALLBACK_3 = (Dispatcher)callbackArray[3];
+        this.CGLIB$CALLBACK_4 = (Dispatcher)callbackArray[4];
+        this.CGLIB$CALLBACK_5 = (MethodInterceptor)callbackArray[5];
+        Callback[] callbackArray2 = callbackArray;
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 = this;
+        this.CGLIB$CALLBACK_6 = (MethodInterceptor)callbackArray[6];
+    }
+
+    @Override
+    public Callback getCallback(int n) {
+        Callback callback;
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 = this;
+        switch (n) {
+            case 0: {
+                callback = computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$CALLBACK_0;
+                break;
+            }
+            case 1: {
+                callback = computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$CALLBACK_1;
+                break;
+            }
+            case 2: {
+                callback = computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$CALLBACK_2;
+                break;
+            }
+            case 3: {
+                callback = computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$CALLBACK_3;
+                break;
+            }
+            case 4: {
+                callback = computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$CALLBACK_4;
+                break;
+            }
+            case 5: {
+                callback = computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$CALLBACK_5;
+                break;
+            }
+            case 6: {
+                callback = computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$CALLBACK_6;
+                break;
+            }
+            default: {
+                callback = null;
+            }
+        }
+        return callback;
+    }
+
+    @Override
+    public Callback[] getCallbacks() {
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 = this;
+        return new Callback[]{this.CGLIB$CALLBACK_0, this.CGLIB$CALLBACK_1, this.CGLIB$CALLBACK_2, this.CGLIB$CALLBACK_3, this.CGLIB$CALLBACK_4, this.CGLIB$CALLBACK_5, this.CGLIB$CALLBACK_6};
+    }
+
+    public static MethodProxy CGLIB$findMethodProxy(Signature signature) {
+        String string = ((Object)signature).toString();
+        switch (string.hashCode()) {
+            case -508378822: {
+                if (!string.equals("clone()Ljava/lang/Object;")) break;
+                return CGLIB$clone$4$Proxy;
+            }
+            case 543471501: {
+                if (!string.equals("saveUser()V")) break;
+                return CGLIB$saveUser$0$Proxy;
+            }
+            case 1826985398: {
+                if (!string.equals("equals(Ljava/lang/Object;)Z")) break;
+                return CGLIB$equals$1$Proxy;
+            }
+            case 1913648695: {
+                if (!string.equals("toString()Ljava/lang/String;")) break;
+                return CGLIB$toString$2$Proxy;
+            }
+            case 1984935277: {
+                if (!string.equals("hashCode()I")) break;
+                return CGLIB$hashCode$3$Proxy;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void setCallback(int n, Callback callback) {
+        switch (n) {
+            case 0: {
+                this.CGLIB$CALLBACK_0 = (MethodInterceptor)callback;
+                break;
+            }
+            case 1: {
+                this.CGLIB$CALLBACK_1 = (MethodInterceptor)callback;
+                break;
+            }
+            case 2: {
+                this.CGLIB$CALLBACK_2 = (NoOp)callback;
+                break;
+            }
+            case 3: {
+                this.CGLIB$CALLBACK_3 = (Dispatcher)callback;
+                break;
+            }
+            case 4: {
+                this.CGLIB$CALLBACK_4 = (Dispatcher)callback;
+                break;
+            }
+            case 5: {
+                this.CGLIB$CALLBACK_5 = (MethodInterceptor)callback;
+                break;
+            }
+            case 6: {
+                this.CGLIB$CALLBACK_6 = (MethodInterceptor)callback;
+                break;
+            }
+        }
+    }
+
+    private static final void CGLIB$BIND_CALLBACKS(Object object) {
+        block2: {
+            Object object2;
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3;
+            block3: {
+                computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 = (ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3)object;
+                if (computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BOUND) break block2;
+                computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BOUND = true;
+                object2 = CGLIB$THREAD_CALLBACKS.get();
+                if (object2 != null) break block3;
+                object2 = CGLIB$STATIC_CALLBACKS;
+                if (CGLIB$STATIC_CALLBACKS == null) break block2;
+            }
+            Callback[] callbackArray = (Callback[])object2;
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e32 = computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3;
+            computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e32.CGLIB$CALLBACK_6 = (MethodInterceptor)callbackArray[6];
+            computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e32.CGLIB$CALLBACK_5 = (MethodInterceptor)callbackArray[5];
+            computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e32.CGLIB$CALLBACK_4 = (Dispatcher)callbackArray[4];
+            computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e32.CGLIB$CALLBACK_3 = (Dispatcher)callbackArray[3];
+            computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e32.CGLIB$CALLBACK_2 = (NoOp)callbackArray[2];
+            computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e32.CGLIB$CALLBACK_1 = (MethodInterceptor)callbackArray[1];
+            computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e32.CGLIB$CALLBACK_0 = (MethodInterceptor)callbackArray[0];
+        }
+    }
+
+    @Override
+    public final TargetSource getTargetSource() {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).getTargetSource();
+    }
+
+    public final Class getTargetClass() {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((TargetClassAware)dispatcher.loadObject()).getTargetClass();
+    }
+
+    public final Class[] getProxiedInterfaces() {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).getProxiedInterfaces();
+    }
+
+    public final boolean isInterfaceProxied(Class clazz) {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).isInterfaceProxied(clazz);
+    }
+
+    @Override
+    public final int getAdvisorCount() {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).getAdvisorCount();
+    }
+
+    @Override
+    public final Advisor[] getAdvisors() {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).getAdvisors();
+    }
+
+    @Override
+    public final boolean isProxyTargetClass() {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).isProxyTargetClass();
+    }
+
+    @Override
+    public final void setTargetSource(TargetSource targetSource) {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        ((Advised)dispatcher.loadObject()).setTargetSource(targetSource);
+    }
+
+    @Override
+    public final void setExposeProxy(boolean bl) {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        ((Advised)dispatcher.loadObject()).setExposeProxy(bl);
+    }
+
+    @Override
+    public final boolean isExposeProxy() {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).isExposeProxy();
+    }
+
+    @Override
+    public final void setPreFiltered(boolean bl) {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        ((Advised)dispatcher.loadObject()).setPreFiltered(bl);
+    }
+
+    @Override
+    public final boolean isPreFiltered() {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).isPreFiltered();
+    }
+
+    @Override
+    public final void addAdvisor(Advisor advisor) throws AopConfigException {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        ((Advised)dispatcher.loadObject()).addAdvisor(advisor);
+    }
+
+    @Override
+    public final void addAdvisor(int n, Advisor advisor) throws AopConfigException {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        ((Advised)dispatcher.loadObject()).addAdvisor(n, advisor);
+    }
+
+    @Override
+    public final boolean removeAdvisor(Advisor advisor) {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).removeAdvisor(advisor);
+    }
+
+    @Override
+    public final void removeAdvisor(int n) throws AopConfigException {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        ((Advised)dispatcher.loadObject()).removeAdvisor(n);
+    }
+
+    @Override
+    public final boolean replaceAdvisor(Advisor advisor, Advisor advisor2) throws AopConfigException {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).replaceAdvisor(advisor, advisor2);
+    }
+
+    @Override
+    public final void addAdvice(int n, Advice advice) throws AopConfigException {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        ((Advised)dispatcher.loadObject()).addAdvice(n, advice);
+    }
+
+    @Override
+    public final void addAdvice(Advice advice) throws AopConfigException {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        ((Advised)dispatcher.loadObject()).addAdvice(advice);
+    }
+
+    @Override
+    public final boolean removeAdvice(Advice advice) {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).removeAdvice(advice);
+    }
+
+    @Override
+    public final String toProxyConfigString() {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).toProxyConfigString();
+    }
+
+    public ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3() {
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 = this;
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3);
+    }
+
+    static {
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$STATICHOOK17();
+    }
+
+    public final boolean equals(Object object) {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_5;
+        if (methodInterceptor == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_5;
+        }
+        if (methodInterceptor != null) {
+            Object object2 = methodInterceptor.intercept(this, CGLIB$equals$1$Method, new Object[]{object}, CGLIB$equals$1$Proxy);
+            return object2 == null ? false : (Boolean)object2;
+        }
+        return super.equals(object);
+    }
+
+    public final String toString() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor != null) {
+            return (String)methodInterceptor.intercept(this, CGLIB$toString$2$Method, CGLIB$emptyArgs, CGLIB$toString$2$Proxy);
+        }
+        return super.toString();
+    }
+
+    public final int hashCode() {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_6;
+        if (methodInterceptor == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_6;
+        }
+        if (methodInterceptor != null) {
+            Object object = methodInterceptor.intercept(this, CGLIB$hashCode$3$Method, CGLIB$emptyArgs, CGLIB$hashCode$3$Proxy);
+            return object == null ? 0 : ((Number)object).intValue();
+        }
+        return super.hashCode();
+    }
+
+    protected final Object clone() throws CloneNotSupportedException {
+        MethodInterceptor methodInterceptor = this.CGLIB$CALLBACK_0;
+        if (methodInterceptor == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            methodInterceptor = this.CGLIB$CALLBACK_0;
+        }
+        if (methodInterceptor != null) {
+            return methodInterceptor.intercept(this, CGLIB$clone$4$Method, CGLIB$emptyArgs, CGLIB$clone$4$Proxy);
+        }
+        return super.clone();
+    }
+
+    @Override
+    public final int indexOf(Advisor advisor) {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).indexOf(advisor);
+    }
+
+    @Override
+    public final int indexOf(Advice advice) {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).indexOf(advice);
+    }
+
+    @Override
+    public Object newInstance(Callback[] callbackArray) {
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$SET_THREAD_CALLBACKS(callbackArray);
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 = new ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3();
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$SET_THREAD_CALLBACKS(null);
+        return computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3;
+    }
+
+    @Override
+    public Object newInstance(Callback callback) {
+        throw new IllegalStateException("More than one callback object required");
+    }
+
+    @Override
+    public Object newInstance(Class[] classArray, Object[] objectArray, Callback[] callbackArray) {
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3;
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$SET_THREAD_CALLBACKS(callbackArray);
+        Class[] classArray2 = classArray;
+        switch (classArray.length) {
+            case 0: {
+                computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3 = new ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3();
+                break;
+            }
+            default: {
+                throw new IllegalArgumentException("Constructor not found");
+            }
+        }
+        ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$SET_THREAD_CALLBACKS(null);
+        return computerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3;
+    }
+
+    @Override
+    public final boolean isFrozen() {
+        Dispatcher dispatcher = this.CGLIB$CALLBACK_4;
+        if (dispatcher == null) {
+            ComputerServiceImpl$$EnhancerBySpringCGLIB$$bb6484e3.CGLIB$BIND_CALLBACKS(this);
+            dispatcher = this.CGLIB$CALLBACK_4;
+        }
+        return ((Advised)dispatcher.loadObject()).isFrozen();
+    }
+}
+
+Affect(row-cnt:2) cost in 869 ms.
