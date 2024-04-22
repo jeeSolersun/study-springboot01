@@ -23,7 +23,7 @@ public class MyTest {
         TbHotelDao tbHotelDao = context.getBean(TbHotelDao.class);
 
 //        insertDataToTableOfMysql(tbHotelDao);
-        List<TbHotel> tbHotels = tbHotelDao.selectAll();
+//        List<TbHotel> tbHotels = tbHotelDao.selectAll();
 //        System.out.println("tbHotels.size() = " + tbHotels.size());
 
 
@@ -49,7 +49,7 @@ public class MyTest {
                     .price(22)
                     .starName(base.getStar() + "星")
                     .build();
-            tbHotelDao.insertSelective(tbHotel);
+            tbHotelDao.insert(tbHotel);
         }
     }
 

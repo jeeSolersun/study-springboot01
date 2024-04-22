@@ -1,11 +1,13 @@
 package com.codeify.springboot01.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
@@ -16,8 +18,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-@Table(schema = "codeify", name = "tb_hotel")
+@TableName(schema = "codeify", value = "tb_hotel")
 public class TbHotel implements Serializable {
+    @TableId(type = IdType.ASSIGN_ID)
     /**
      * 酒店id
      */

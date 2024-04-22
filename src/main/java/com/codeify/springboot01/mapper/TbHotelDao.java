@@ -1,10 +1,10 @@
 package com.codeify.springboot01.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.codeify.springboot01.entity.TbHotel;
 import org.springframework.stereotype.Repository;
-import tk.mybatis.mapper.common.Mapper;
 
 @Repository
-public interface TbHotelDao extends Mapper<TbHotel> {
+public interface TbHotelDao extends BaseMapper<TbHotel> {
 
 }
