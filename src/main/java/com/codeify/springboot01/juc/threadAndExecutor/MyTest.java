@@ -1,10 +1,17 @@
 package com.codeify.springboot01.juc.threadAndExecutor;
 
+import cn.hutool.core.util.IdUtil;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author codeify
@@ -12,7 +19,46 @@ import java.util.concurrent.Executors;
  */
 @Slf4j
 public class MyTest {
+     private static ExecutorService executorService;
+
+     static {
+         executorService = Executors.newFixedThreadPool(10);
+     }
+
     public static void main(String[] args) {
+        System.out.println("hello world");
+    }
+
+    private static void test04() {
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("codeify", 1);
+        Integer res = map.computeIfAbsent("codeify", key -> 2);
+        System.out.println("res = " + res);
+    }
+
+    private static void test03() {
+        int size = 1000_000;
+        ConcurrentHashMap<String, AtomicInteger> map = new ConcurrentHashMap<>(size);
+        List<CompletableFuture<Void>> futureList = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
+                String uuid = IdUtil.simpleUUID();
+                AtomicInteger atomicInteger = map.computeIfAbsent(uuid, key -> new AtomicInteger());
+                atomicInteger.incrementAndGet();
+            }, executorService);
+            futureList.add(future);
+        }
+        CompletableFuture.allOf(futureList.toArray(new CompletableFuture[0])).join();
+        map.forEach((key, value) -> {
+            int i = value.get();
+            if (i > 1) {
+                log.info("key = {}, value = {}", key, value);
+            }
+        });
+        log.info("done!!!");
+    }
+
+    private static void test02() {
         ExecutorService executorService = Executors.newFixedThreadPool(1);
         executorService.execute(() -> {
             log.info("res : {}", 1/0);
@@ -24,7 +70,6 @@ public class MyTest {
         executorService.execute(() -> {
             log.info("execute again");
         });
-
     }
 
     private static void test01() {

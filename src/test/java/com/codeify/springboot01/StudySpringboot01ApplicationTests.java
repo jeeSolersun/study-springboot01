@@ -1,4 +1,4 @@
-package com.hanson.studyspringboot01;
+package com.codeify.springboot01;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

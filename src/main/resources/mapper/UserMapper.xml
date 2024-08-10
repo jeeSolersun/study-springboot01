@@ -7,6 +7,6 @@
 
 
     <select id="findById" resultType="com.codeify.springboot01.entity.User">
-        select * from user where id = #{id}
+        select * from CODEIFY.T_USER where id = #{id}
     </select>
 </mapper>

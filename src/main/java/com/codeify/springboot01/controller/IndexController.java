@@ -45,7 +45,7 @@ public class IndexController {
     @ResponseBody
     public Apple hello() {
         Apple apple = new Apple(1, "aa", "red", 22);
-        sleep();
+        // sleep();
         return apple;
 //        return "hello, spring-security";
     }

@@ -14,13 +14,13 @@ import java.util.stream.IntStream;
 
 @SpringBootApplication
 @EnableAspectJAutoProxy
-@MapperScan()
+@MapperScan
 public class SpringSpringboot01Application {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(SpringSpringboot01Application.class, args);
-        UserServiceImpl userService = context.getBean(UserServiceImpl.class);
-        userService.test01();
+        /* UserServiceImpl userService = context.getBean(UserServiceImpl.class);
+        userService.test01(); */
     }
 
     private static void test02(UserServiceImpl userService) {

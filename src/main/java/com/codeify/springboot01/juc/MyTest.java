@@ -24,7 +24,15 @@ public class MyTest {
                 new ThreadPoolExecutor(4, 400,0, TimeUnit.MILLISECONDS, queue, new ThreadPoolExecutor.CallerRunsPolicy());
     }
 
+    private String name;
     public static void main(String[] args) {
+        CompletableFuture.runAsync(() -> {
+            // log.info("this.name = " + this.name);
+            log.info("this.name = ");
+        }).join();
+    }
+
+    private static void test02() {
         CompletableFuture.runAsync(() -> {
             log.info("start");
             try {
