@@ -43,5 +43,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> {
         System.out.println("byId = " + byId);
     }
 
+    public User findById(Integer id) {
+        return baseMapper.findById(id);
+    }
 
 }

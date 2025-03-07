@@ -1,6 +1,7 @@
 package com.codeify.springboot01;
 
 import com.codeify.springboot01.entity.User;
+import com.codeify.springboot01.mapper.UserMapper;
 import com.codeify.springboot01.service.UserServiceImpl;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -19,8 +20,10 @@ public class SpringSpringboot01Application {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(SpringSpringboot01Application.class, args);
-        /* UserServiceImpl userService = context.getBean(UserServiceImpl.class);
-        userService.test01(); */
+        UserMapper userMapper = context.getBean(UserMapper.class);
+        User byId = userMapper.findById(1);
+        System.out.println("byId = " + byId);
+        context.close();
     }
 
     private static void test02(UserServiceImpl userService) {
@@ -31,7 +34,7 @@ public class SpringSpringboot01Application {
     }
 
     private static List<User> getUsers() {
-        List<User> codeify = IntStream.range(0, 5).mapToObj(val -> new User(null, "codeify", 22, 100))
+        List<User> codeify = IntStream.range(0, 5).mapToObj(val -> new User(null, "codeify", 22, 100, null, null, null))
                 .collect(Collectors.toList());
         return codeify;
     }

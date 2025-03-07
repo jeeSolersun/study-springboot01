@@ -1,1 +1,6 @@
-#aa
+com.codeify.springboot01.study.StudySpringBoot01$MyImportSelector=\
+com.codeify.springboot01.study.StudySpringBoot01.MyAutoConfiguration2\
+  
+com.codeify.springboot01.study.StudySpringBoot02$MyImportSelector=\
+  com.codeify.springboot01.study.StudySpringBoot02.AutoConfiguration1,\
+  com.codeify.springboot01.study.StudySpringBoot02.AutoConfiguration2

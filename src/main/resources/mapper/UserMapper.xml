@@ -3,10 +3,21 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.codeify.springboot01.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.codeify.springboot01.entity.User">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="INTEGER"/>
+        <result column="score" property="score" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="c_json" property="json" jdbcType="CLOB" typeHandler="org.apache.ibatis.type.ClobTypeHandler"/>
+    </resultMap>
 <!-- findById   -->
 
 
-    <select id="findById" resultType="com.codeify.springboot01.entity.User">
-        select * from CODEIFY.T_USER where id = #{id}
+    <select id="findById" resultMap="BaseResultMap">
+        select *
+        from T_USER
+        where id = #{id}
     </select>
 </mapper>

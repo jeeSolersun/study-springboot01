@@ -7,16 +7,16 @@ spring:
 #    password: root
 # 引入达梦数据源
   datasource:
-    url: jdbc:dm://localhost:30236/CODEIFY?useSSL=false&useInformationSchema=true&DefaultSchema=CODEIFY
+    url: jdbc:dm://localhost:30236/CODEIFY?useSSL=false&useInformationSchema=true&schema=CODEIFY
     username: SYSDBA
     password: SYSDBA001
     driver-class-name: dm.jdbc.driver.DmDriver
     type: com.zaxxer.hikari.HikariDataSource
 #    type: com.alibaba.druid.pool.DruidDataSource
 
-  data:
-    mongodb:
-      uri: mongodb://localhost:37017/codeify
+#  data:
+##    mongodb:
+##      uri: mongodb://localhost:37017/codeify
 server:
   port: 8081
 mybatis:
@@ -28,3 +28,5 @@ mybatis-plus:
     db-config:
       logic-delete-value: 1 # 逻辑删除值
       logic-not-delete-value: 0 # 逻辑未删除值
+#      schema: CODEIFY
+#      table-prefix: CODEIFY.
